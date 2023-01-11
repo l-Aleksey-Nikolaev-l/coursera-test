@@ -17,13 +17,28 @@ html {
 	background: rgba(6, 21, 33, 0.85);
 }
 
-#bg {
-    width: 500px;
-    height: 500px;
-    /* background-color: blue;
-    background-image: url("http://az837918.vo.msecnd.net/publishedimages/articles/1733/en-CA/images/1/free-download-this-stunning-alberta-scene-for-your-device-background-image-L-6.jpg");
-    background-repeat: no-repeat;
-    background-position: center; */
-    
-    background: url("http://az837918.vo.msecnd.net/publishedimages/articles/1733/en-CA/images/1/free-download-this-stunning-alberta-scene-for-your-device-background-image-L-6.jpg") blue no-repeat center;
+
+
+
+div {
+    /* background-color: #00FFFF; */
+}
+
+p {
+    width: 50%;
+    /* border: 1px solid black; */
+    float: left;
+    padding: 10px;
+}
+
+#p1 {
+    /* background-color: #A52A2A; */
+}
+
+#p2 {
+    /* background-color: #DEB887; */
+}
+
+section {
+    clear: left;
 }
