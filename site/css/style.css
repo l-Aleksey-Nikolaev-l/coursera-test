@@ -17,44 +17,50 @@ html {
 	background: rgba(6, 21, 33, 0.85);
 }
 
+/*===== Base style =====*/
 
-
-
-h1 {
+h1  {
     margin-bottom: 15px;
 }
 
-div#container {
-    background-color: #00FFFF;
-    position: relative;
-    top: 60px;
-}
-
 p {
-    height: 50px;
-    width: 50px;
     border: 1px solid black;
     margin-bottom: 15px;
 }
 
 #p1 {
     background-color: #A52A2A;
-    position: relative;
-    top: 65px;
-    left: 65px;
+    height: 300px;
+    width: 300px;
 }
 
 #p2 {
-    background-color: #DEB887;
+    background-color: #DE8887;
+    height: 50px;
+    width: 50px;
 }
 
-#p3 {
-    background-color: #5F8EA0;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+
+
+/* If width >= 1200px than width = 100% */
+@media (min-width: 1200px) {
+    #p1 {
+        width: 100%;
+    }
 }
 
-#p4 {
-    background-color: #FF7F50;
+
+/* If width <= 600px than width = 50% */
+@media (max-width: 600px) {
+    #p1 {
+        width: 50%;
+    }
+}
+
+/* If width >= 601px and width <= 1199px than width = 75% */
+@media (min-width: 601px) and (max-width: 1199px) {
+    #p1 {
+        width: 75%;
+    }
 }
