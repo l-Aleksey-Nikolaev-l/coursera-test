@@ -18,11 +18,10 @@ html {
 } */
 
 
-.row {
-    margin-bottom: 15px;
+body {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #61122F;
 }
 
-.row > div {
-    border: 2px solid maroon;
-    background-color: gray;
-}
