@@ -25,3 +25,44 @@ body {
     background-color: #61122F;
 }
 
+#header-nav {
+    background-color: #F6B319;
+    border-radius: 0;
+    border: 0;
+}
+
+#logo-img {
+    background: url("../images/restaurant-logo-150.png") no-repeat;
+    height: 150px;
+    width: 150px;
+    margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+    padding-top: 25px;
+}
+
+.navbar-brand h1 {
+    font-family: 'Lora', serif;
+    color: #557C3E;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 0.75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand p {
+    color: rgb(50, 50, 50);
+    margin-top: 15px;
+}
+
+.navbar-brand p span {
+    vertical-align: middle;
+}
