@@ -46,7 +46,7 @@ body {
 
 .navbar-brand h1 {
     font-family: 'Lora', serif;
-    color: #557C3E;
+    color: rgb(85, 124, 62);
     font-size: 1.8em;
     text-transform: uppercase;
     font-weight: bold;
@@ -243,5 +243,22 @@ body {
     .container .jumbotron {
         margin-top: 30px;
         padding: 0;
+    }
+
+    #menu-tile, #specials-tile {
+        width: 360px;
+        margin: 0 auto 15px;
+    }
+}
+
+/* Super Extra Small Devices Only (for example, iPhone 4) */
+@media (max-width: 478px) {
+    .navbar-brand h1 {
+        padding-top: 5px;
+        font-size: 8.15vw;
+    }
+    #menu-tile, #specials-tile {
+        width: 290px;
+        margin: 0 auto 15px;
     }
 }
