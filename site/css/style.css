@@ -4,19 +4,6 @@
 /*=============================*/
 /*=============================*/
 
-/* *, ::after, ::before {
-	box-sizing: border-box;
-    padding: 0;
-	margin: 0;
-}
-
-html {
-	font-family: "Atkinson Hyperlegible";
-	font-size: 1.5em;
-    color: white;
-	background: rgba(6, 21, 33, 0.85);
-} */
-
 
 body {
     font-family: 'Oxygen', sans-serif;
@@ -172,13 +159,11 @@ body {
 }
 
 #menu-tile {
-    background: url("../images/menu-tile.jpg") no-repeat;
-    background-position: center;
+    background: url("../images/menu-tile.jpg") no-repeat center;
 }
 
 #specials-tile {
-    background: url("../images/specials-tile.jpg") no-repeat;
-    background-position: center;
+    background: url("../images/specials-tile.jpg") no-repeat center;
 }
 
 #menu-tile span, #specials-tile span, #map-tile span {
@@ -193,10 +178,40 @@ body {
     background-color: #000;
     opacity: 0.8;
 }
-
-
-
 /* END HOME PAGE AREA */
+
+
+/* MENU CATEGORIES PAGE */
+.category-tile {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border: 2px solid #3F0C1F;
+}
+
+.category-tile span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.category-tile:hover {
+    box-shadow: 0 1px 5px 1px #CCCCCC;
+}
+
+#menu-categories-title + div {
+    margin-bottom: 50px;
+}
+/* END MENU CATEGORIES PAGE */
 
 
 
@@ -316,5 +331,14 @@ body {
     #menu-tile, #specials-tile {
         width: 290px;
         margin: 0 auto 15px;
+    }
+    
+    .col-xxs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
     }
 }
