@@ -1,23 +1,42 @@
-let x;
-console.log(x);
 
-if (x === undefined) {
-    console.log("x is undefined");
+// String concatenation
+let string = "Hello";
+string += " World";
+console.log(string + "!");
+
+//Regular math operations: +, *, /, -
+console.log((4 + 5) / 3);
+console.log(undefined / 5); // ---> NaN = Not a Number
+
+
+// Equality
+let x = 4, y = 4;
+if (x === y) {
+    console.log("x = y");
 }
 
-x = 5;
+let xx = 4, yy = "4";
+if (xx == yy) { // ---> type STRING was converted to INT
+    console.log("xx = yy");
+}
 
-if (x === undefined) {
-    console.log("x is undefined");
+// Strict equality
+if (xx === yy) { // ---> ERROR, because different types
+    console.log("xx != yy");
+}
+
+// If statement (all false)
+if (false || null || undefined || "" || 0 || NaN) {
+    console.log("This line won't execute")
 } else {
-    console.log("x has been defined");
+    console.log("All false");
 }
 
-// 6 general primitives
+//If statement (all true)
+if (true && "hello" && 1 && -1 && "false") {
+    console.log("All true");
+}
 
-// boolean: true and false
-// symbol: "F", "C", etc
-// number: 1, 123, 2134353
-// string: "Hello world"
-// null
-// undefined
+// & - Ampersand
+// () - round brackets
+// {} - curly brackets / braces
