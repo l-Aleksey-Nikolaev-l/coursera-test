@@ -1,42 +1,14 @@
 
-// String concatenation
-let string = "Hello";
-string += " World";
-console.log(string + "!");
+//Handling Default Values
+function orderChickenWith(sideDish) {
+    // if (sideDish === undefined) {
+    //     sideDish = "whatever!";
+    // }
 
-//Regular math operations: +, *, /, -
-console.log((4 + 5) / 3);
-console.log(undefined / 5); // ---> NaN = Not a Number
+    sideDish = sideDish || "whatever!"; // default value
 
-
-// Equality
-let x = 4, y = 4;
-if (x === y) {
-    console.log("x = y");
+    console.log("Chicken with " + sideDish);
 }
 
-let xx = 4, yy = "4";
-if (xx == yy) { // ---> type STRING was converted to INT
-    console.log("xx = yy");
-}
-
-// Strict equality
-if (xx === yy) { // ---> ERROR, because different types
-    console.log("xx != yy");
-}
-
-// If statement (all false)
-if (false || null || undefined || "" || 0 || NaN) {
-    console.log("This line won't execute")
-} else {
-    console.log("All false");
-}
-
-//If statement (all true)
-if (true && "hello" && 1 && -1 && "false") {
-    console.log("All true");
-}
-
-// & - Ampersand
-// () - round brackets
-// {} - curly brackets / braces
+orderChickenWith("noodles");
+orderChickenWith();
