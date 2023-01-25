@@ -1,25 +1,37 @@
-// Object creation
-// let company = new Object();
-//
-// company.name = "Facebook";
-// company.ceo = new Object();
-// company.ceo.firstName = "Mark";
-// company.ceo.favColor = "Blue";
-//
-// console.log(company["name"]);
-// console.log("Company CEO name is: " + company.ceo.firstName);
+// Functions.
+// Functions are objects
+// Functions are First-Class Data
+
+function multiply (x, y) {
+    return x * y;
+}
+
+multiply.version = "v.1.0.0";
+console.log(multiply.version);
+
+
+// Function factory
+function makeMultiplier (multiplier) {
+    let myFunc = function (x) {
+        return multiplier * x;
+    };
+    return myFunc;
+}
+
+let multiplyBy3 = makeMultiplier(3);
+console.log(multiplyBy3(10));
+let doubleAll = makeMultiplier(2);
+console.log(doubleAll(100));
 
 
 
-// Better way: object literal
+// Passing functions as arguments
 
-let facebook = {
-    name: "Facebook",
-    ceo: {
-        firstName: "Mark",
-        favColor: "Blue"
-    },
-    "stock of company": 110
-};
+function doOperationOn(x, operation) {
+    return operation(x);
+}
 
-console.log(facebook);
+let result = doOperationOn(5, multiplyBy3);
+console.log(result);
+result = doOperationOn(100, doubleAll);
+console.log(result);
