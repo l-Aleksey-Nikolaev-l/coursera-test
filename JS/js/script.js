@@ -1,21 +1,26 @@
-// Passing Variables by Value vs. by Reference
-let a = 7;
-let b = a;
-console.log("a: " + a);
-console.log("b: " + b);
+// Function Constructors, prototype, and the 'this' Keyword
 
-b = 5;
-console.log("after b update:");
-console.log("a: " + a);
-console.log("b: " + b);
+// function test() {
+//     console.log(this);
+// }
+// test();
 
 
-let c = { x: 7};
-let d = c;
-console.log(c);
-console.log(d);
 
-d.x = 5;
-console.log("after d.x update:");
-console.log(c);
-console.log(d);
+// Function Constructor
+function Circle (radius) { // this function constructor with CAPITAL C
+    this.radius = radius;
+
+    // this.getArea = function () {
+    //     return Math.PI * Math.pow(this.radius, 2);
+    // };
+}
+
+Circle.prototype.getArea = function () {
+    return Math.PI * Math.pow(this.radius, 2);
+}
+
+let myCircle = new Circle(10); // new Object()
+console.log(myCircle.getArea());
+
+
