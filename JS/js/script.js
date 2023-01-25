@@ -1,26 +1,25 @@
-// Function Constructors, prototype, and the 'this' Keyword
+// Object Literals and the 'this' Keyword
 
-// function test() {
-//     console.log(this);
-// }
-// test();
+let literalCircle = { // new Object()
+    radius: 10,
 
+    getArea: function () {
 
+        let self = this;
 
-// Function Constructor
-function Circle (radius) { // this function constructor with CAPITAL C
-    this.radius = radius;
+        console.log(this); // The 'this' word works only inside this object
 
-    // this.getArea = function () {
-    //     return Math.PI * Math.pow(this.radius, 2);
-    // };
-}
+        let increaseRadius = function () {
+            self.radius = 20;
+        };
 
-Circle.prototype.getArea = function () {
-    return Math.PI * Math.pow(this.radius, 2);
-}
+        increaseRadius();
+        console.log(this.radius);
 
-let myCircle = new Circle(10); // new Object()
-console.log(myCircle.getArea());
+        return Math.PI * Math.pow(this.radius, 2);
+    }
+};
+
+console.log(literalCircle.getArea());
 
 
