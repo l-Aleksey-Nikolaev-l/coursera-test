@@ -1,14 +1,10 @@
+// Object creation
+let company = new Object();
 
-//Handling Default Values
-function orderChickenWith(sideDish) {
-    // if (sideDish === undefined) {
-    //     sideDish = "whatever!";
-    // }
+company.name = "Facebook";
+company.ceo = new Object();
+company.ceo.firstName = "Mark";
+company.ceo.favColor = "Blue";
 
-    sideDish = sideDish || "whatever!"; // default value
-
-    console.log("Chicken with " + sideDish);
-}
-
-orderChickenWith("noodles");
-orderChickenWith();
+console.log(company["name"]);
+console.log("Company CEO name is: " + company.ceo.firstName);
