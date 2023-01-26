@@ -1,16 +1,6 @@
-// Closures
-
-function makeMultiplier (multiplier) {
-    return (
-        function (x) {
-            return multiplier * x;
-        }
-    );
+let AlexGreeter = {};
+AlexGreeter.name = "Alex";
+AlexGreeter.sayHello = function () {
+    console.log("Hello " + AlexGreeter.name);
 }
-
-
-
-let doubleAll = makeMultiplier(2);
-
-console.log(doubleAll(10));
 
