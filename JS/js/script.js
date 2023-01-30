@@ -3,8 +3,8 @@
 
 document.addEventListener("DOMContentLoaded",
     function (event) {
-        function sayHello (){
-            console.log(this);
+        function sayHello (event) {
+            console.log(event);
 
             let userName = document.getElementById("name").value;
 
@@ -48,11 +48,21 @@ document.addEventListener("DOMContentLoaded",
         document
             .querySelector("button")
             .addEventListener("click", sayHello);
-
 // or
 
 // document.querySelector("button")
 //     .onclick = sayHello;
+
+
+        document
+            .querySelector("body")
+            .addEventListener("mousemove",
+                function (event) {
+                if (event.shiftKey === true) {
+                    console.log("X: " + event.clientX);
+                    console.log("Y: " + event.clientY);
+                }
+            });
     }
 );
 
