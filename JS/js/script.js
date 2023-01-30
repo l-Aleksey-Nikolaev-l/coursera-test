@@ -1,41 +1,59 @@
 
 
-function sayHello (){
-    let userName = document.getElementById("name").value;
 
-    const nameValidator = new RegExp("[A-Za-z]");
-    const nameTest = nameValidator.test(userName);
+document.addEventListener("DOMContentLoaded",
+    function (event) {
+        function sayHello (){
+            console.log(this);
 
-    if (nameTest === true) {
+            let userName = document.getElementById("name").value;
 
-        let message = "<h2>Hello " + userName + "!</h2>";
+            const nameValidator = new RegExp("[A-Za-z]");
+            const nameTest = nameValidator.test(userName);
 
-        document
-            .getElementById("content")
-            .innerHTML = message;
+            if (nameTest === true) {
 
-        if (userName === "student") {
-            let title =
+                this.textContent = "Said It!"
+
+                let message = "<h2>Hello " + userName + "!</h2>";
+
                 document
-                    .querySelector("#title")
-                    .textContent;
-            title += " & Loving' it!"
-            document
-                .querySelector("#title")
-                .textContent = title;
+                    .getElementById("content")
+                    .innerHTML = message;
+
+                if (userName === "student") {
+                    let title =
+                        document
+                            .querySelector("#title")
+                            .textContent;
+                    title += " & Loving' it!"
+                    document
+                        .querySelector("#title")
+                        .textContent = title;
+                }
+
+            } else {
+                this.textContent = "Say it!"
+                document
+                    .getElementById("content")
+                    .textContent = "";
+            }
+
         }
 
-    } else {
+
+
+// Unobtrusive event binding
+
         document
-            .getElementById("content")
-            .textContent = "";
+            .querySelector("button")
+            .addEventListener("click", sayHello);
+
+// or
+
+// document.querySelector("button")
+//     .onclick = sayHello;
     }
-
-}
-
-
-
-
-
+);
 
 
