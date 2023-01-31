@@ -15,19 +15,28 @@
         }
     }
 
-    ajaxUtils.sendGetRequest = function(requestUrl, responseHandler) {
-        let request = getRequestObject();
-        request.onreadystatechange =
-            function() {
-                handleResponse(request, responseHandler);
-            };
-        request.open("GET", requestUrl, true);
-        request.send(null);
+    ajaxUtils.sendGetRequest =
+        function(requestUrl, responseHandler, isJasonResponse) {
+            let request = getRequestObject();
+            request.onreadystatechange =
+                function() {
+                    handleResponse(request, responseHandler, isJasonResponse);
+                };
+            request.open("GET", requestUrl, true);
+            request.send(null);
     };
 
-    function handleResponse(request, responseHandler) {
+    function handleResponse(request, responseHandler, isJasonResponse) {
         if((request.readyState === 4) && (request.status === 200)) {
-            responseHandler(request);
+            if (isJasonResponse === undefined) {
+                isJasonResponse = true;
+            }
+
+            if (isJasonResponse) {
+                responseHandler(JSON.parse(request.responseText));
+            } else {
+                responseHandler(request.responseText);
+            }
         }
     }
 
